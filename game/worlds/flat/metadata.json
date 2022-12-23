@@ -1,0 +1,15 @@
+{
+    "generator.foliage1": "bbs@block:2",
+    "generator.secondary": "bbs@block:1",
+    "chunk_size": 16,
+    "seed": 0,
+    "compress": true,
+    "generator.foliage2": "bbs@block:3",
+    "column": true,
+    "generator": "flat",
+    "column_base": -2,
+    "tileset": "assets@tilesets/default.json",
+    "name": "",
+    "column_height": 6,
+    "generator.primary": "bbs@block:0"
+}

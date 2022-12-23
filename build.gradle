@@ -1,0 +1,64 @@
+import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
+
+plugins {
+    id 'java'
+}
+
+ext.lwjglVersion = "3.2.1"
+
+group = 'net.example'
+version = '0.1'
+
+def os = DefaultNativePlatform.currentOperatingSystem
+
+if (os.isWindows()) {
+    ext.lwjglNatives = "natives-windows"
+}
+else if (os.isMacOsX()) {
+    ext.lwjglNatives = "natives-macos"
+}
+else if (os.isLinux()) {
+    ext.lwjglNatives = "natives-linux"
+}
+
+if (project.hasProperty("os")) {
+    ext.lwjglNatives = "natives-" + project.getProperties().get("os")
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repo.spongepowered.org/maven/"
+    }
+    maven {
+        url "https://maven.fabricmc.net/"
+    }
+}
+
+dependencies {
+    compileOnly "org.lwjgl:lwjgl:$lwjglVersion"
+    compileOnly "org.lwjgl:lwjgl-glfw:$lwjglVersion"
+    compileOnly "org.lwjgl:lwjgl-openal:$lwjglVersion"
+    compileOnly "org.lwjgl:lwjgl-opengl:$lwjglVersion"
+    compileOnly "org.lwjgl:lwjgl-stb:$lwjglVersion"
+    compileOnly "org.lwjgl:lwjgl:$lwjglVersion:$lwjglNatives"
+    compileOnly "org.lwjgl:lwjgl-glfw:$lwjglVersion:$lwjglNatives"
+    compileOnly "org.lwjgl:lwjgl-openal:$lwjglVersion:$lwjglNatives"
+    compileOnly "org.lwjgl:lwjgl-opengl:$lwjglVersion:$lwjglNatives"
+    compileOnly "org.lwjgl:lwjgl-stb:$lwjglVersion:$lwjglNatives"
+    compileOnly "org.greenrobot:eventbus-java:3.3.1"
+    compileOnly "org.joml:joml:1.9.2"
+    compileOnly "org.spongepowered:mixin:0.8.5"
+    compileOnly "net.fabricmc:fabric-loader:0.13.0"
+    compileOnly "net.fabricmc:access-widener:2.1.0"
+    compileOnly "net.fabricmc:tiny-mappings-parser:0.2.2.14"
+    compileOnly "com.google.guava:guava:21.0"
+    compileOnly "com.google.code.gson:gson:2.8.7"
+    compileOnly "org.ow2.asm:asm:9.2"
+    compileOnly "org.ow2.asm:asm-analysis:9.2"
+    compileOnly "org.ow2.asm:asm-commons:9.2"
+    compileOnly "org.ow2.asm:asm-tree:9.2"
+    compileOnly "org.ow2.asm:asm-util:9.2"
+
+    compileOnly files("./launcher.jar")
+}

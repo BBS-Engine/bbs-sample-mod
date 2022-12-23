@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Sample mod" type="Application" factoryName="Application">
+    <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+    <option name="MAIN_CLASS_NAME" value="net.fabricmc.loader.impl.launch.knot.KnotClient" />
+    <module name="bbs-sample-mod.main" />
+    <option name="PROGRAM_PARAMETERS" value="--gameDirectory $ProjectFileDir$\game\ --defaultWorld flat --development" />
+    <option name="VM_PARAMETERS" value="-Dfile.encoding=UTF-8 -Dfabric.development=true" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

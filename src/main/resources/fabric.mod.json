@@ -1,0 +1,15 @@
+{
+	"schemaVersion": 1,
+	"id": "sample-mod",
+	"name": "Sample mod",
+	"description": "Sample mod",
+	"version": "0.1",
+	"entrypoints": {
+		"main": [
+			"net.example.sample_mod.SampleMod"
+		]
+	},
+	"mixins": [
+		"sample_mod.mixins.json"
+	]
+}
