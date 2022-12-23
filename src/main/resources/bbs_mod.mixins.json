@@ -1,7 +1,7 @@
 {
 	"required": true,
 	"minVersion": "0.8",
-	"package": "mchorse.bbs_sample_mod.mixins",
+	"package": "net.example.sample_mod.mixins",
 	"mixins": [
 		"UIDashboardMixin"
 	],

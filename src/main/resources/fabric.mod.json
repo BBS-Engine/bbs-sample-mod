@@ -10,6 +10,6 @@
 		]
 	},
 	"mixins": [
-		"sample_mod.mixins.json"
+		"bbs_mod.mixins.json"
 	]
 }
