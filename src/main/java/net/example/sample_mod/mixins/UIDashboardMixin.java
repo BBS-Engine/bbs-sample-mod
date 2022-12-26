@@ -9,8 +9,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(UIDashboard.class)
 public abstract class UIDashboardMixin
 {
-    @Inject(method = "registerPanels()V", at = @At("HEAD"))
-    public void registerPanels(CallbackInfo info)
+    @Inject(method = "<init>(Lmchorse/bbs/IBridge;)V", at = @At("RETURN"))
+    public void injectInConstructor(CallbackInfo info)
     {
         System.out.println("Welcome to the dashboard!");
     }
