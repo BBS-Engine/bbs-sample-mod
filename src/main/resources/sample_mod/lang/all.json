@@ -7,6 +7,7 @@
 
     "sample_mod.ui.panels.sample.title": "Sample panel",
     "sample_mod.ui.panels.sample.press_me": "Press me!",
+    "sample_mod.ui.panels.sample.press_me-tooltip": "Do it!",
     "sample_mod.ui.panels.sample.modal.title": "Modal's title",
     "sample_mod.ui.panels.sample.modal.description": "You just pressed a button! There is much more you can do with BBS' UIs, but this is just a sample..."
 }

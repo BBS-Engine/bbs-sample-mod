@@ -1,7 +1,16 @@
 {
 	"schemaVersion": 1,
-	"id": "sample-mod",
+	"id": "sample_mod",
 	"name": "Sample mod",
+	"authors": [
+		{
+			"name": "McHorse"
+		}
+	],
+	"contact": {
+		"homepage": "https://github.com/mchorse/bbs-sample-mod/",
+		"sources": "https://github.com/mchorse/bbs-sample-mod/"
+	},
 	"description": "Sample mod",
 	"version": "0.1",
 	"entrypoints": {
@@ -10,6 +19,6 @@
 		]
 	},
 	"mixins": [
-		"bbs_mod.mixins.json"
+		"sample_mod.mixins.json"
 	]
 }

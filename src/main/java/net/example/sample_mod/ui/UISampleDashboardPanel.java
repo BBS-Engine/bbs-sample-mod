@@ -17,6 +17,7 @@ public class UISampleDashboardPanel extends UIDashboardPanel<UIDashboard>
 
         this.pressMe = new UIButton(IKey.lang("sample_mod.ui.panels.sample.press_me"), this::handlePressMe);
         this.pressMe.flex().relative(this).xy(0.5F, 0.5F).wh(100, 20).anchor(0.5F);
+        this.pressMe.tooltip(IKey.lang("sample_mod.ui.panels.sample.press_me-tooltip"));
 
         this.add(this.pressMe);
     }

@@ -1,5 +1,6 @@
 package net.example.sample_mod;
 
+import mchorse.app.utils.ValueModButtons;
 import mchorse.bbs.config.ConfigBuilder;
 import mchorse.bbs.config.values.ValueBoolean;
 
@@ -26,6 +27,8 @@ public class SampleSettings
     public static void register(ConfigBuilder builder)
     {
         /* A category must be created first before options can be created! */
-        registerPanel = builder.category("general").getBoolean("panel", true);
+        builder.category("general").register(new ValueModButtons(SampleMod.MOD_ID));
+
+        registerPanel = builder.getBoolean("panel", true);
     }
 }
