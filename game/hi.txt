@@ -1,0 +1,1 @@
+Hi! This file is created because git doesn't store empty folders... :)

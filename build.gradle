@@ -1,28 +1,32 @@
-import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
+import org.gradle.internal.os.OperatingSystem
 
 plugins {
     id 'java'
 }
 
-ext.lwjglVersion = "3.2.1"
-
 group = 'net.example'
 version = '0.1'
 
-def os = DefaultNativePlatform.currentOperatingSystem
+ext.lwjglVersion = "3.2.1"
 
-if (os.isWindows()) {
-    ext.lwjglNatives = "natives-windows"
-}
-else if (os.isMacOsX()) {
-    ext.lwjglNatives = "natives-macos"
-}
-else if (os.isLinux()) {
-    ext.lwjglNatives = "natives-linux"
+switch (OperatingSystem.current()) {
+    case OperatingSystem.LINUX:
+        project.ext.lwjglNatives = "natives-linux"
+        break
+    case OperatingSystem.MAC_OS:
+        project.ext.lwjglNatives = "natives-macos-arm64"
+        break
+    case OperatingSystem.WINDOWS:
+        project.ext.lwjglNatives = "natives-windows"
+        break
 }
 
 if (project.hasProperty("os")) {
     ext.lwjglNatives = "natives-" + project.getProperties().get("os")
+
+    if (ext.lwjglNatives == "natives-macos-arm64") {
+        ext.lwjglVersion = "3.3.0"
+    }
 }
 
 repositories {

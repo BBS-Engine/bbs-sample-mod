@@ -22,8 +22,7 @@ eclipse
 run
 .DS_Store
 /game/*
-!/game/assets/
-!/game/worlds/
+!/game/hi.txt
 /release/
 hs_err_pid*.log
 

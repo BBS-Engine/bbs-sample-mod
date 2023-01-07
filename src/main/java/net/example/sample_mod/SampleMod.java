@@ -1,10 +1,10 @@
 package net.example.sample_mod;
 
 import mchorse.bbs.BBS;
-import mchorse.bbs.events.RegisterConfigsEvent;
-import mchorse.bbs.events.RegisterCoreEvent;
-import mchorse.bbs.events.RegisterDashboardPanels;
-import mchorse.bbs.events.RegisterL10nEvent;
+import mchorse.bbs.events.register.RegisterConfigsEvent;
+import mchorse.bbs.events.register.RegisterCoreEvent;
+import mchorse.bbs.events.register.RegisterDashboardPanels;
+import mchorse.bbs.events.register.RegisterL10nEvent;
 import mchorse.bbs.l10n.keys.IKey;
 import mchorse.bbs.resources.Link;
 import mchorse.bbs.resources.packs.InternalAssetsSourcePack;
