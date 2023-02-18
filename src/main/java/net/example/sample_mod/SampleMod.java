@@ -35,7 +35,7 @@ public class SampleMod implements ModInitializer
          * the language file to load strings from. The font doesn't support
          * non latin (and even accented latin characters) yet, so language
          * support isn't available straight out of the box... :( */
-        BBS.getProvider().register(new InternalAssetsSourcePack(MOD_ID, this.getClass().getClassLoader()));
+        BBS.getProvider().register(new InternalAssetsSourcePack(MOD_ID, this.getClass()));
     }
 
     @Subscribe

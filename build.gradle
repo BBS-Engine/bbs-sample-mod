@@ -7,26 +7,18 @@ plugins {
 group = 'net.example'
 version = '0.1'
 
-ext.lwjglVersion = "3.2.1"
+ext.lwjglVersion = "3.3.0"
 
 switch (OperatingSystem.current()) {
     case OperatingSystem.LINUX:
         project.ext.lwjglNatives = "natives-linux"
         break
     case OperatingSystem.MAC_OS:
-        project.ext.lwjglNatives = "natives-macos-arm64"
+        project.ext.lwjglNatives = System.getProperty("os.arch").startsWith("aarch64") ? "natives-macos-arm64" : "natives-macos"
         break
     case OperatingSystem.WINDOWS:
         project.ext.lwjglNatives = "natives-windows"
         break
-}
-
-if (project.hasProperty("os")) {
-    ext.lwjglNatives = "natives-" + project.getProperties().get("os")
-
-    if (ext.lwjglNatives == "natives-macos-arm64") {
-        ext.lwjglVersion = "3.3.0"
-    }
 }
 
 repositories {
