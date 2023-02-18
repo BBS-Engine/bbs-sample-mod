@@ -1,0 +1,13 @@
+{
+    "sample_mod.config.title": "Пример мода",
+    "sample_mod.config.general.title": "Основные",
+    "sample_mod.config.general.tooltip": "Это пример который показывает как добавить свои опции",
+    "sample_mod.config.general.panel": "Зарегистрировать панель",
+    "sample_mod.config.general.panel-comment": "Эта опция отвечает за то если этот пример мода регистрирует отдельную панель (требуется перезапуск)",
+
+    "sample_mod.ui.panels.sample.title": "Пример панели",
+    "sample_mod.ui.panels.sample.press_me": "Нажми меня!",
+    "sample_mod.ui.panels.sample.press_me-tooltip": "Давай!",
+    "sample_mod.ui.panels.sample.modal.title": "Заголовок модала",
+    "sample_mod.ui.panels.sample.modal.description": "Вы только что нажали на кнопку! BBS GUI имеют много способностей, но это лишь пример..."
+}

@@ -41,10 +41,10 @@ public class SampleMod implements ModInitializer
     @Subscribe
     public void registerL10n(RegisterL10nEvent event)
     {
-        /* Register the sample_mod/lang/all.json file to be (re)loaded by the
+        /* Register the sample_mod/lang/*.json file to be (re)loaded by the
          * localization manager, which allows you to use keys and IKey instead
          * of raw strings. */
-        event.l10n.register(new Link(MOD_ID, "lang/all.json"));
+        event.l10n.registerOne((l) -> new Link(MOD_ID, "lang/" + l + ".json"));
     }
 
     @Subscribe

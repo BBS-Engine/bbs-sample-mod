@@ -18,7 +18,7 @@ import mchorse.bbs.config.values.ValueBoolean;
  *     <li>%MOD_ID%.config.%CATEGORY%.%OPTION_ID%-comment = tooltip that will be shown when hovering on option's UI controls</li>
  * </ul>
  *
- * <p>See src/main/resources/sample_mod/lang/all.json for more information.</p>
+ * <p>See src/main/resources/sample_mod/lang/en_US.json for more information.</p>
  */
 public class SampleSettings
 {
