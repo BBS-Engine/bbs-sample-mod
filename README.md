@@ -1,4 +1,4 @@
-**Disclaimer**: *This is a copy of [Modding](https://github.com/mchorse/bbs/wiki/Modding) page from BBS' Wiki... if something doesn't work, this page might be outdated, so please check out the original!*
+> **Disclaimer**: This is a copy of [Modding](https://github.com/mchorse/bbs/wiki/Modding) page from BBS' Wiki... if something doesn't work, this page might be outdated, so please check out the original!
 
 ---
 
