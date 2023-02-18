@@ -1,3 +1,7 @@
+**Disclaimer**: *This is a copy of [Modding](https://github.com/mchorse/bbs/wiki/Modding) page from BBS' Wiki... if something doesn't work, this page might be outdated, so please check out the original!*
+
+---
+
 BBS provides modding capabilities powered by [Fabric Loader](https://fabricmc.net/wiki/documentation:fabric_loader).
 
 ## Prerequisites
