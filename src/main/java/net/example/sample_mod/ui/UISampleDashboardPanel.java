@@ -1,13 +1,12 @@
 package net.example.sample_mod.ui;
 
-import mchorse.bbs.l10n.keys.IKey;
 import mchorse.bbs.ui.dashboard.UIDashboard;
-import mchorse.bbs.ui.dashboard.UIDashboardPanel;
+import mchorse.bbs.ui.dashboard.panels.UIDashboardPanel;
 import mchorse.bbs.ui.framework.elements.buttons.UIButton;
 import mchorse.bbs.ui.framework.elements.overlay.UIMessageOverlayPanel;
 import mchorse.bbs.ui.framework.elements.overlay.UIOverlay;
 
-public class UISampleDashboardPanel extends UIDashboardPanel<UIDashboard>
+public class UISampleDashboardPanel extends UIDashboardPanel
 {
     public UIButton pressMe;
 
@@ -15,9 +14,9 @@ public class UISampleDashboardPanel extends UIDashboardPanel<UIDashboard>
     {
         super(dashboard);
 
-        this.pressMe = new UIButton(IKey.lang("sample_mod.ui.panels.sample.press_me"), this::handlePressMe);
+        this.pressMe = new UIButton(UIKeysSample.PRESS_ME, this::handlePressMe);
         this.pressMe.flex().relative(this).xy(0.5F, 0.5F).wh(100, 20).anchor(0.5F);
-        this.pressMe.tooltip(IKey.lang("sample_mod.ui.panels.sample.press_me-tooltip"));
+        this.pressMe.tooltip(UIKeysSample.PRESS_ME_TOOLTIP);
 
         this.add(this.pressMe);
     }
@@ -25,8 +24,8 @@ public class UISampleDashboardPanel extends UIDashboardPanel<UIDashboard>
     private void handlePressMe(UIButton b)
     {
         UIMessageOverlayPanel panel = new UIMessageOverlayPanel(
-            IKey.lang("sample_mod.ui.panels.sample.modal.title"),
-            IKey.lang("sample_mod.ui.panels.sample.modal.description")
+            UIKeysSample.SAMPLE_MODAL_TITLE,
+            UIKeysSample.SAMPLE_MODAL_DESCRIPTION
         );
 
         UIOverlay.addOverlay(this.getContext(), panel);

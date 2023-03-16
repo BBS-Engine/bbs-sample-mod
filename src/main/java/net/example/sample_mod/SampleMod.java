@@ -1,10 +1,10 @@
 package net.example.sample_mod;
 
 import mchorse.bbs.BBS;
-import mchorse.bbs.events.register.RegisterConfigsEvent;
 import mchorse.bbs.events.register.RegisterCoreEvent;
 import mchorse.bbs.events.register.RegisterDashboardPanels;
 import mchorse.bbs.events.register.RegisterL10nEvent;
+import mchorse.bbs.events.register.RegisterSettingsEvent;
 import mchorse.bbs.l10n.keys.IKey;
 import mchorse.bbs.resources.Link;
 import mchorse.bbs.resources.packs.InternalAssetsSourcePack;
@@ -48,7 +48,7 @@ public class SampleMod implements ModInitializer
     }
 
     @Subscribe
-    public void registerConfiguration(RegisterConfigsEvent event)
+    public void registerConfiguration(RegisterSettingsEvent event)
     {
         /* Register a config for this mod. A new file by the ID would be saved
          * based on the options registered in the SampleSettings.register().
@@ -66,7 +66,7 @@ public class SampleMod implements ModInitializer
         {
             UISampleDashboardPanel panel = new UISampleDashboardPanel((UIDashboard) event.dashboard);
 
-            event.dashboard.panels.registerPanel(panel, IKey.lang("sample_mod.ui.panels.sample.title"), SampleIcons.SMILEY);
+            event.dashboard.getPanels().registerPanel(panel, IKey.lang("sample_mod.ui.panels.sample.title"), SampleIcons.SMILEY);
         }
     }
 }
